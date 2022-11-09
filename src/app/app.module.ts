@@ -4,13 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from 'src/environments/environment';
+import { LoginButtonComponent } from './components/login-button/login-button.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginButtonComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule.forRoot({
+      ...env.auth,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
