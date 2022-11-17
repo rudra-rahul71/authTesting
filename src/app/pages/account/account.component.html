@@ -1,0 +1,5 @@
+<div *ngIf="auth.user$ | async as user">
+    <h1>{{ user.email }}</h1>
+
+    <p>{{ profileJson }}</p>
+</div>
