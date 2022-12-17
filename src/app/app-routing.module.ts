@@ -24,7 +24,8 @@ const routes: Routes = [
     path: '', 
     redirectTo: 'home',
     pathMatch: 'full'
-  }
+  },
+  //{ path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 
 @NgModule({
